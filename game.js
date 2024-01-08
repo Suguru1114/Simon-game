@@ -2,8 +2,14 @@
 // $("h1").css("color", "red");
 // alert("hello");
 
-// randomNumber 1 to 3 
+// randomNumber 1 to 4 to pick 4 color  
+
+var gamePattern = [];
+
 function nextSequence(){
-    var randomNumber = Math.floor(Math.random()*3 ) +1;
-    console.log(randomNumber);
+    var randomNumber = Math.floor(Math.random()*4 );
 }
+
+var randomChosenColor = buttonColors[randomNumber];
+
+
