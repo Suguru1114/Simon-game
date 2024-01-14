@@ -15,4 +15,11 @@ function nextSequence(){
 
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
+    // handler function
+    $("btn").click(function(){
+
+        var userChosenColour
+        alert("the burtton is clicked");
+    });
+
 }
