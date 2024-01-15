@@ -16,7 +16,10 @@ function nextSequence(){
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
     // handler function
-    $("btn").click(function(){
+    $("btn").on("click", function(){
+
+        // can add this id to userChosenColour 
+        console.log("Button ID" + this.id);
 
         var userChosenColour
         alert("the burtton is clicked");
