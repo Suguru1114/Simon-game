@@ -18,10 +18,11 @@ function nextSequence(){
     // handler function
     $("btn").on("click", function(){
 
+        var userChosenColour = $(this).attr("id");
         // can add this id to userChosenColour 
         console.log("Button ID" + this.id);
 
-        var userChosenColour
+        
         alert("the burtton is clicked");
     });
 
