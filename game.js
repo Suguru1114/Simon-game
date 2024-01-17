@@ -18,8 +18,8 @@ $(".btn").on("click", function(){
     console.log("Button ID" + this.id);
     // to check if the user input is in array or not
     console.log("userClickedPattern: ", userClickedPattern);
-
-    
+    //call playSound with clicked color
+    playSound(userChosenColour);
     // alert("the button is clicked");
 });
 
