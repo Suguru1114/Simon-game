@@ -13,8 +13,11 @@ var userClickedPattern = [];
 $(".btn").on("click", function(){
 
     var userChosenColour = $(this).attr("id");
+    userClickedPattern.push(userChosenColour);
     // can add this id to userChosenColour 
     console.log("Button ID" + this.id);
+    // to check if the user input is in array or not
+    console.log("userClickedPattern: ", userClickedPattern);
 
     
     // alert("the button is clicked");
