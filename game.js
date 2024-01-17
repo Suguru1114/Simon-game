@@ -16,11 +16,10 @@ $(".btn").on("click", function(){
     userClickedPattern.push(userChosenColour);
     // can add this id to userChosenColour 
     console.log("Button ID" + this.id);
-    // to check if the user input is in array or not
+    // check if the user input is in array
     console.log("userClickedPattern: ", userClickedPattern);
     //call playSound with clicked color
     playSound(userChosenColour);
-    // alert("the button is clicked");
 });
 
 function nextSequence(){
@@ -32,4 +31,16 @@ function nextSequence(){
 
     var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
     audio.play();
+    playSound(randomChosenColour);
+}
+//(currentColor) is called single inout parameter
+function animatePress(currentColor){
+
+}
+
+function playSound(name){
+    var audio = new Audio("sounds/" + name + ".mp3");
+  audio.play();
+
+
 }
