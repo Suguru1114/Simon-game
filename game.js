@@ -33,10 +33,19 @@ function nextSequence(){
     audio.play();
     playSound(randomChosenColour);
 }
-//(currentColor) is called single inout parameter
-function animatePress(currentColor){
+//(currentColor)location is called single input parameter
+//add pressed class to the button
+function animatePress(currentColor) {
+    console.log("Animating press for color: " + currentColor);
 
+    $("#" + currentColor).addClass("pressed");
+
+    setTimeout(function() {
+        $("#" + currentColor).removeClass("pressed");
+        console.log("Pressed class removed for color: " + currentColor);
+    }, 100);
 }
+
 
 function playSound(name){
     var audio = new Audio("sounds/" + name + ".mp3");
