@@ -29,9 +29,9 @@ function nextSequence(){
 
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
-    var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
+    var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
     audio.play();
-    playSound(randomChosenColour);
+    playSound(randomChosenColor);
 }
 //(currentColor)location is called single input parameter
 //add pressed class to the button
