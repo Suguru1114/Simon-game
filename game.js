@@ -3,23 +3,24 @@
 // alert("hello");
 
 // randomNumber 1 to 4 to pick 4 color  
-var buttonColours = ["red", "blue", "green", "yellow"];
+var buttonColors = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
 
 var userClickedPattern = [];
 
 // handler function
-$(".btn").on("click", function(){
+// $(".btn").on("click", function(){
+    $(".btn").click(function(){
 
-    var userChosenColour = $(this).attr("id");
-    userClickedPattern.push(userChosenColour);
-    // can add this id to userChosenColour 
+    var userChosenColor = $(this).attr("id");
+    userClickedPattern.push(userChosenColor);
+    // can add this id to userChosenColor 
     console.log("Button ID" + this.id);
     // check if the user input is in array
     console.log("userClickedPattern: ", userClickedPattern);
     //call playSound with clicked color
-    playSound(userChosenColour);
+    playSound(userChosenColor);
 });
 
 function nextSequence(){
@@ -50,6 +51,5 @@ function animatePress(currentColor) {
 function playSound(name){
     var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
-
 
 }
