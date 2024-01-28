@@ -9,6 +9,15 @@ var gamePattern = [];
 
 var userClickedPattern = [];
 
+var level = 0;
+
+$(document).keypress(function(){
+    if(!started)[
+        $()
+    
+    ]
+}
+
 // handler function
 // $(".btn").on("click", function(){
 $(".btn").click(function(){
@@ -46,7 +55,7 @@ function animatePress(currentColor) {
     setTimeout(function() {
         $("#" + currentColor).removeClass("pressed");
         console.log("Pressed class removed for color: " + currentColor);
-    }, 100);
+    }, 100);　
 }
 
 
