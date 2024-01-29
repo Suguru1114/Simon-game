@@ -12,11 +12,13 @@ var userClickedPattern = [];
 var level = 0;
 
 $(document).keypress(function(){
-    if(!started)[
-        $()
-    
-    ]
-}
+    if(!gameStarted){
+        gameStarted = true;
+        //get level-tytle class from .html and change "press A" message to Level
+        $(".level-tytle").text("level" + level);
+        nextSequence()    
+    }
+});
 
 // handler function
 // $(".btn").on("click", function(){
