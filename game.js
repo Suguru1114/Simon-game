@@ -8,15 +8,15 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 
 var userClickedPattern = [];
-
+var gameStarted = false;
 var level = 0;
 
 $(document).keypress(function(){
     if(!gameStarted){
-        gameStarted = true;
         //get level-tytle class from .html and change "press A" message to Level
-        $(".level-tytle").text("level" + level);
+        $("#level-title").text("Level" + level );
         nextSequence()    
+        gameStarted = true;
     }
 });
 
@@ -27,16 +27,19 @@ $(".btn").click(function(){
     var userChosenColour = $(this).attr("id");
     userClickedPattern.push(userChosenColour);
     // can add this id to userChosenColor 
-    console.log("Button ID" + this.id);
+    // console.log("Button ID" + this.id);
     // check if the user input is in array
-    console.log("userClickedPattern: ", userClickedPattern);
+    // console.log("userClickedPattern: ", userClickedPattern);
     //call playSound with clicked color
     playSound(userChosenColour);
     animatePress(userChosenColour);
-
 });
 
 function nextSequence(){
+
+    level++;
+    $("#level-title").text("Level"+level)
+
     var randomNumber = Math.floor(Math.random()*4 );
     var randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
@@ -50,13 +53,12 @@ function nextSequence(){
 //(currentColor)location is called single input parameter
 //add pressed class to the button
 function animatePress(currentColor) {
-    console.log("Animating press for color: " + currentColor);
+    // console.log("Animating press for color: " + currentColor);
 
     $("#" + currentColor).addClass("pressed");
-
     setTimeout(function() {
         $("#" + currentColor).removeClass("pressed");
-        console.log("Pressed class removed for color: " + currentColor);
+        // console.log("Pressed class removed for color: " + currentColor);
     }, 100);　
 }
 
