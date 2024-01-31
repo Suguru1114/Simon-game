@@ -62,6 +62,10 @@ function animatePress(currentColor) {
     }, 100);　
 }
 
+function checkAnswer(currentLevel){
+    if(userClickedPattern[currentLevel] === gamePattern[currentLevel])
+    console.log("correct!!");
+};
 
 function playSound(name){
     var audio = new Audio("sounds/" + name + ".mp3");
