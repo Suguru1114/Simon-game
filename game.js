@@ -12,7 +12,7 @@ var gameStarted = false;
 var level = 0;
 
 $(document).keypress(function(){
-    if(!gameStarted){
+    if(!gameStarted) {
         //get level-tytle class from .html and change "press A" message to Level
         $("#level-title").text("Level " + level );
         nextSequence()    
@@ -22,12 +22,16 @@ $(document).keypress(function(){
 
 // handler function
 // $(".btn").on("click", function(){
-$(".btn").click(function(){
+$(".btn").click(function() {
+    if (gameStarted) {
+        var userChosenColour = $(this).attr("id");
+        userClickedPattern.push(userChosenColour);
 
-    var userChosenColour = $(this).attr("id");
-    userClickedPattern.push(userChosenColour);
-    playSound(userChosenColour);
-    animatePress(userChosenColour);
+        checkAnswer(userClickedPattern.length - 1)
+
+        playSound(userChosenColour);
+        animatePress(userChosenColour);
+    }
 });
 
 //(currentColor)location is called single input parameter
