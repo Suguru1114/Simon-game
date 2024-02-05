@@ -57,6 +57,7 @@ function checkAnswer(currentLevel) {
         }
     } else {
         console.log("Wrong!");
+        //if its wrong its variable called wrong but if its "wrong" its specific item
         playSound("wrong");
 
     }
