@@ -43,7 +43,7 @@ function animatePress(currentColor) {
     setTimeout(function() {
         $("#" + currentColor).removeClass("pressed");
         // console.log("Pressed class removed for color: " + currentColor);
-    }, 100);　
+    }, 100);
 }
 
 function checkAnswer(currentLevel) {
@@ -57,6 +57,8 @@ function checkAnswer(currentLevel) {
         }
     } else {
         console.log("Wrong!");
+        playSound("wrong");
+
     }
 }
 
