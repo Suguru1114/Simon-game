@@ -13,7 +13,6 @@ var level = 0;
 
 $(document).keypress(function(){
     if(!gameStarted) {
-        //get level-tytle class from .html and change "press A" message to Level
         $("#level-title").text("Level " + level );
         nextSequence()    
         gameStarted = true;
@@ -58,7 +57,13 @@ function checkAnswer(currentLevel) {
     } else {
         console.log("Wrong!");
         //if its wrong its variable called wrong but if its "wrong" its specific item
+        $("body").addClass("game-over");
         playSound("wrong");
+        
+        setTimeout(function() {
+            $("body").removeClass("game-over");
+        },200);
+        $("#level-title").text("Game Over, Press Any Key to Restart");
 
     }
 }
