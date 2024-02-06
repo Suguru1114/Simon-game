@@ -63,9 +63,18 @@ function checkAnswer(currentLevel) {
         setTimeout(function() {
             $("body").removeClass("game-over");
         },200);
+        //change h1 title
         $("#level-title").text("Game Over, Press Any Key to Restart");
 
+        startOver();
+
     }
+}
+function startOver(){
+     level = 0; 
+     gamePattern = [];
+     gameStarted = false;
+
 }
 
 function nextSequence(){
